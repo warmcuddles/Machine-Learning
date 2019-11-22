@@ -1,0 +1,36 @@
+sudo apt install python3-pip
+pip3 install jupyter
+~/.local/bin/jupyter-notebook
+sudo apt-get update
+sudo apt-get install default-jre
+java -version
+sudo apt-get install scala
+scala -version
+pip3 install py4j
+
+download spark
+sudo tar -zxvf spark<tab> (save in home)
+
+export SPARK_HOME='home/ubuntu/spark-2.1.0-bin-hadoop2.7'
+export PATH=$SPARK_HOME:$PATH
+export PYTHONPATH=$SPARK_HOME/python:$PYTHONPATH
+
+export PYSPARK_DRIVER_PYTHON="jupyter"
+export PYSPARK_DRIVER_PYTHON_OPTS="notebook"
+export PYSPARK_PYTHON="python3"
+
+#Permission errors: FOlder locks
+sudo chmod 777 spark-2.1.0<tab>
+
+cd spark-2.1.0<tab>/
+cd python/
+python3
+
+cd spark<tab>/
+sudo chmod 777 python
+
+cd python/
+sudo chmod 777 pyspark
+
+
+
